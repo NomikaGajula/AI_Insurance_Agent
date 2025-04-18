@@ -1,6 +1,7 @@
 # summarizer.py
 # import openai
 import os 
+import streamlit as st
 # from dotenv import load_dotenv
 # from openai import AsyncOpenAI
 # load_dotenv()
@@ -25,13 +26,18 @@ import os
 from transformers import pipeline
 
 # Load the summarization pipeline once (can be outside the function if you're calling multiple times)
-summarizer = pipeline("summarization", model="sshleifer/distilbart-cnn-12-6")
-
+# summarizer = pipeline("summarization", model="sshleifer/distilbart-cnn-12-6")
+try:
+    # Load the summarization pipeline
+    summarizer = pipeline("summarization", model="sshleifer/distilbart-cnn-12-6")
+except Exception as e:
+    st.error(f"Error loading model: {e}")
 def generate_summary(article):
     content = article.get('content') or article.get('description') or ''
     full_text = f"Title: {article.get('title', '')}\nContent: {content}"
 
     # Summarize the article
+    
     summary = summarizer(full_text, max_length=150, min_length=50, do_sample=False)
 
     # Format the output as bullet points
