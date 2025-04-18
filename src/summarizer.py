@@ -27,21 +27,35 @@ from transformers import pipeline
 
 # Load the summarization pipeline once (can be outside the function if you're calling multiple times)
 # summarizer = pipeline("summarization", model="sshleifer/distilbart-cnn-12-6")
-try:
-    # Load the summarization pipeline
-    summarizer = pipeline("summarization", model="sshleifer/distilbart-cnn-12-6")
-except Exception as e:
-    st.error(f"Error loading model: {e}")
+def load_summarizer():
+    try:
+        # Load the summarization pipeline
+        summarizer = pipeline("summarization", model="sshleifer/distilbart-cnn-12-6")
+    except Exception as e:
+        st.error(f"Error loading model: {e}")
+summarizer = load_summarizer()
+
 def generate_summary(article):
+    if summarizer is None:
+        return "Unable to generate summary - model loading failed."
     content = article.get('content') or article.get('description') or ''
     full_text = f"Title: {article.get('title', '')}\nContent: {content}"
 
     # Summarize the article
-    
-    summary = summarizer(full_text, max_length=150, min_length=50, do_sample=False)
+    try:
+        summary = summarizer(full_text, max_length=150, min_length=50, do_sample=False)
+        
+        # Format the output as bullet points
+        summarized_text = summary[0]['summary_text']
+        bullet_points = [f"- {point.strip()}" for point in summarized_text.split('. ') if point]
+        
+        return "\n".join(bullet_points)
+    except Exception as e:
+        return f"Error during summarization: {str(e)}"
+    # summary = summarizer(full_text, max_length=150, min_length=50, do_sample=False)
 
     # Format the output as bullet points
-    summarized_text = summary[0]['summary_text']
-    bullet_points = [f"- {point.strip()}" for point in summarized_text.split('. ') if point]
+    # summarized_text = summary[0]['summary_text']
+    # bullet_points = [f"- {point.strip()}" for point in summarized_text.split('. ') if point]
     
-    return "\n".join(bullet_points)
+    # return "\n".join(bullet_points)
