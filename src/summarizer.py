@@ -25,7 +25,7 @@ import os
 from transformers import pipeline
 
 # Load the summarization pipeline once (can be outside the function if you're calling multiple times)
-summarizer = pipeline("summarization", model="facebook/bart-large-cnn")
+summarizer = pipeline("summarization", model="sshleifer/distilbart-cnn-12-6")
 
 def generate_summary(article):
     content = article.get('content') or article.get('description') or ''
