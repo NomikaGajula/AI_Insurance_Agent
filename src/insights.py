@@ -4,9 +4,11 @@ import google.generativeai as genai
 
 import os
 import json
+import streamlit as st
 # insight_generator = pipeline("text-generation", model="gpt2")
 # json_file_path = 'outputs/reports.json'
-gemini_api_key = os.getenv("genAI_API_KEY")
+gemini_api_key=st.secrets["genAI_API_KEY"]
+# gemini_api_key = os.getenv("genAI_API_KEY")
 genai.configure(api_key=gemini_api_key)
 # print(gemini_api_key)
 model = genai.GenerativeModel("gemini-2.0-flash-lite")
