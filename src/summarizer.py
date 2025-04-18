@@ -1,9 +1,9 @@
 # summarizer.py
 # import openai
 import os 
-from dotenv import load_dotenv
+# from dotenv import load_dotenv
 # from openai import AsyncOpenAI
-load_dotenv()
+# load_dotenv()
 # openai.api_key = os.getenv("open_apikey")
 
 # async def generate_summary(article):
