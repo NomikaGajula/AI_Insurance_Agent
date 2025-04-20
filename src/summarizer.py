@@ -36,17 +36,17 @@ def generate_summary(article,domain):
 
     return summary.strip()
 
-article={
-    "source": {
+# article={
+#     "source": {
       
-      "name": "BBC News"
-    },
+#       "name": "BBC News"
+#     },
     
-    "title": "Brazil to host Prince William's Earthshot Prize",
-    "description": "The climate prize ceremony will come just before Brazil hosts the COP30 climate summit in November.",
-    "url": "https://www.bbc.com/news/articles/c2kv0kpyx1yo",
-    "urlToImage": "https://ichef.bbci.co.uk/news/1024/branded_news/ff3c/live/06939240-10cd-11f0-8fbb-bfd213c39946.jpg",
-    "publishedAt": "2025-04-04T02:18:09Z",
-    "content": "The Prince of Wales' Earthshot Prize will be held in Brazil later this year, Kensington Palace has announced, in the same month the country hosts the COP30 UNclimate change conference.\r\nThe main awar\u2026 [+2481 chars]"
-  }
-generate_summary(article,"climate risk")
+#     "title": "Brazil to host Prince William's Earthshot Prize",
+#     "description": "The climate prize ceremony will come just before Brazil hosts the COP30 climate summit in November.",
+#     "url": "https://www.bbc.com/news/articles/c2kv0kpyx1yo",
+#     "urlToImage": "https://ichef.bbci.co.uk/news/1024/branded_news/ff3c/live/06939240-10cd-11f0-8fbb-bfd213c39946.jpg",
+#     "publishedAt": "2025-04-04T02:18:09Z",
+#     "content": "The Prince of Wales' Earthshot Prize will be held in Brazil later this year, Kensington Palace has announced, in the same month the country hosts the COP30 UNclimate change conference.\r\nThe main awar\u2026 [+2481 chars]"
+#   }
+# generate_summary(article,"climate risk")

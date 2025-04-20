@@ -38,9 +38,9 @@ def generate_insight(summary, domain):
     # print(insight)
     return insight.strip()
 
-summary="""Here's a concise summary of the article in bullet points:
+# summary="""Here's a concise summary of the article in bullet points:
 
-*   **Brazil will host the Earthshot Prize:** Prince William's environmental initiative will take place in Brazil later this year.
-*   **Timing aligns with COP30:** The Earthshot Prize event coincides with Brazil hosting the COP30 UN climate change conference.
-*   **Focus on environmental solutions:** The Earthshot Prize recognizes and awards solutions to pressing environmental challenges."""
-generate_insight(summary,"climate risk")
+# *   **Brazil will host the Earthshot Prize:** Prince William's environmental initiative will take place in Brazil later this year.
+# *   **Timing aligns with COP30:** The Earthshot Prize event coincides with Brazil hosting the COP30 UN climate change conference.
+# *   **Focus on environmental solutions:** The Earthshot Prize recognizes and awards solutions to pressing environmental challenges."""
+# generate_insight(summary,"climate risk")
