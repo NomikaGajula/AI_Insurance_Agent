@@ -1,6 +1,7 @@
 import google.generativeai as genai
 model = genai.GenerativeModel("gemini-2.0-flash-lite")
 
+# Function to get a relevance score from the Gemini model for an article
 def score_article_with_gemini(title, description):
     prompt = f"""Article Title: {title}
     Article Description: {description}
