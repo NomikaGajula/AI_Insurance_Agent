@@ -25,15 +25,13 @@ ai-insurance-agent/
 
 Scraping: Uses scraper.py to fetch relevant articles from the web or news APIs.
 
-Classification: Articles are categorized into domains (e.g., Climate Risk) using classify.py.
-
 Scoring & Sorting: article_sorting.py evaluates and prioritizes articles by relevance.
 
 Summarization: summarizer.py utilizes LLMs to condense articles into concise summaries.
 
 Insight Generation: insights.py derives key insights and takeaways.
 
-Reporting: report_generator.py compiles a final structured report (reports.json).
+Reporting: report_generator.py compiles a final structured report.
 
 Dashboard: dashboard.py powers the homepage interface to view outputs.
 
