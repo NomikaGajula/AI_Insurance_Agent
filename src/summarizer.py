@@ -39,7 +39,7 @@ def generate_summary(article,domain,max_retries=3):
     # Extract text content from response
           summary = response.text
 
-    # print(summary)
+          print(summary)
 
           return summary.strip()
        except ResourceExhausted as e:

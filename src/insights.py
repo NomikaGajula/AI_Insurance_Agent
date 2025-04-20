@@ -35,7 +35,7 @@ def generate_insight(summary, domain):
     # Extract the insight from the response object
     insight = response.text
 
-    # print(insight)
+    print(insight)
     return insight.strip()
 
 # summary="""Here's a concise summary of the article in bullet points:
