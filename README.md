@@ -62,7 +62,7 @@ pip install -r requirements.txt
 
 🔍 Risk Analysts – Track climate, economic, and geopolitical trends.
 
-💡 Decision Makers – Quickly extract insights from the flood of information.
+💡 Decision Makers – Instantly extract insights from the flood of information – understand the impact, and know what actions to take.
 
 
 
